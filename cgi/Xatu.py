@@ -74,6 +74,3 @@ def Str(user_name,password):
 
 
 
-
-
-
