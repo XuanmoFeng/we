@@ -6,6 +6,7 @@ class Msg(object):
         pass
     def send(self):
         return "success"
+
 class TextMsg(Msg):
     def __init__(self,toUserName,fromUserName,content):
         self.__dict=dict()
@@ -13,7 +14,6 @@ class TextMsg(Msg):
         self.__dict['FromUserName']=fromUserName
         self.__dict['CreateTime']=int(time.time())
         self.__dict['Content']=content
-
     def send(self):
         XmlForm = """
         <xml>

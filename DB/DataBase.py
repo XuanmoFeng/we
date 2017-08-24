@@ -13,6 +13,7 @@ def CreateData():
            ) """
     cursor.execute(sql)
     db.close()
+
 def InsertData(Weid,Euid,Eupass):
     db=MySQLdb.connect("localhost","root","123456","xatu") 
     cursor=db.cursor()
