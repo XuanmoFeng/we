@@ -6,6 +6,7 @@ sys.path.append(r'./cgi/')# filename: handle.py
 sys.path.append(r'./cgi/SE/')# filename: handle.py
 sys.path.append(r'./DB/')# filename: handle.py
 sys.path.append(r'./handle/')
+
 from handle import Handle
 
 urls = (

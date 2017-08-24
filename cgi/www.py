@@ -15,9 +15,14 @@ def Grade(weid):
         user=str.partition('@')
         username=user[0]
         password=user[2]
+<<<<<<< HEAD
         result=YouDian.Str(username,password)
         print result
         if result =='':
+=======
+        result=Xatu.Str(username,password)
+        if result == "FALSE":
+>>>>>>> origin/master
             return "查询失败请重新绑定"
         else:
             return result

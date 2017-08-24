@@ -42,7 +42,11 @@ cookie =cookielib.CookieJar()
 handler=urllib2.HTTPCookieProcessor(cookie) 
 opener=urllib2.build_opener(handler)
 urllib2.install_opener(opener)
+<<<<<<< HEAD
 #picture=opener.open(ul)#-----****打开所要打开的网页
+=======
+picture=opener.open(ul)#-----****打开所要打开的网页
+>>>>>>> origin/master
 print cookie
 picture=opener.open(capturl)#-----****打开所要打开的网页
 print cookie
@@ -50,6 +54,7 @@ local=open(picName,'wb')
 local.write(picture.read())
 local.close()
 secretCode=DoPic(picName)
+<<<<<<< HEAD
 he={
     'Accept':'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8',
     'Accept-Encoding':'gzip, deflate',
@@ -69,6 +74,24 @@ try:
     #reponse=urllib2.urlopen(request)
     response=opener.open(request)
    # result=response.read().decode('gb2312')
+=======
+headers={
+    
+    'Accept':'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8',
+    'Accept-Language':'zh-CN,zh;q=0.8',
+    'Connection':'keep-alive',
+    'Content-Type':'application/x-www-form-urlencoded',
+    'Origin':'http://jwc.xatu.edu.cn',
+    'Referer':'http://jwc.xatu.edu.cn/index.htm',
+    'User-Agent':'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/57.0.2987.110 Safari/537.36',
+}
+request=opener.open(Posturl,DoData(user_name,password,secretCode),headers)
+print cookie
+try:
+    reponse=urllib2.urlopen(request)
+    #response=opener.open(request)
+    #result=response.read().decode('gb2312')
+>>>>>>> origin/master
     #print reponse.read().decode('gb2312')
 except urllib2.HTTPError,e:
     print e.code

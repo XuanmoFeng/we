@@ -1,5 +1,6 @@
 #!/usr/bin/env python
 # coding=utf-8
+<<<<<<< HEAD
 import Rot
 import SqlLang
 from  string  import maketrans
@@ -7,13 +8,20 @@ import www
 import Fanyi
 import string
 import Join
+=======
+from  string  import maketrans
+import www
+>>>>>>> origin/master
 def Text(toUser,UserText):
     content=""
     if UserText=="成绩":
         content=www.Grade(toUser)
+<<<<<<< HEAD
     elif UserText.isdigit()&(len(UserText)==4):
         Us=string.atoi(UserText)
         content=Join.Join(Us)
+=======
+>>>>>>> origin/master
     elif UserText.count('&')==1:#绑定
         ind ="&"
         optd ="@"
@@ -24,6 +32,7 @@ def Text(toUser,UserText):
         content="<a href=\"http://119.29.115.52:8080/\">家</a>"
     elif UserText=="公交":
         pass
+<<<<<<< HEAD
     elif UserText[0]=="F":
         content=Fanyi.Trans(UserText[1:])
     elif UserText=="豆瓣":
@@ -40,4 +49,10 @@ def Text(toUser,UserText):
     #else UserText[0:3]
     else:
         content=Rot.Robot(UserText)
+=======
+    elif UserText=="微博":
+        pass
+    elif UserText=="豆瓣":
+        pass
+>>>>>>> origin/master
     return content
